@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <div class="game-info">
+                <div class="round-display">
+                    <span>Round: <span id="current-round">1</span>/5</span>
+                </div>
+                <div class="scoreboard">
+                    <div class="score">
+                        <span class="label">Player</span>
+                        <span class="value" id="player-score">0</span>
+                    </div>
+                    <div class="score">
+                        <span class="label">Computer</span>
+                        <span class="value" id="computer-score">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="choices-section">
+                <h2>Choose Your Move:</h2>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-choice="rock">
+                        <div class="choice-icon">🪨</div>
+                        <span>Rock</span>
+                    </button>
+                    <button class="choice-btn" data-choice="paper">
+                        <div class="choice-icon">📄</div>
+                        <span>Paper</span>
+                    </button>
+                    <button class="choice-btn" data-choice="scissors">
+                        <div class="choice-icon">✂️</div>
+                        <span>Scissors</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="battle-section" id="battle-section" style="display: none;">
+                <div class="battle-display">
+                    <div class="player-choice">
+                        <h3>You</h3>
+                        <div class="choice-display" id="player-choice-display">
+                            <div class="choice-icon" id="player-choice-icon"></div>
+                            <span id="player-choice-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="vs-section">
+                        <span class="vs-text">VS</span>
+                    </div>
+
+                    <div class="computer-choice">
+                        <h3>Computer</h3>
+                        <div class="choice-display" id="computer-choice-display">
+                            <div class="choice-icon" id="computer-choice-icon"></div>
+                            <span id="computer-choice-text"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="round-result" id="round-result">
+                    <h2 id="result-message"></h2>
+                </div>
+            </div>
+
+            <div class="game-over-section" id="game-over-section" style="display: none;">
+                <div class="final-result">
+                    <h2 id="final-message"></h2>
+                    <div class="final-score">
+                        <p>Final Score: <span id="final-player-score"></span> - <span id="final-computer-score"></span></p>
+                    </div>
+                    <button class="play-again-btn" id="play-again-btn">
+                        Play Again
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
