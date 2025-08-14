@@ -1,4 +1,3 @@
-// Game state
 let gameState = {
     playerScore: 0,
     computerScore: 0,
